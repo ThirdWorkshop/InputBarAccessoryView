@@ -592,6 +592,7 @@ open class InputBarAccessoryView: UIView {
     }
 
     open override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        delegate?.touchPoint(inside: point, with: event)
         guard frameInsets.left != 0 || frameInsets.right != 0 else {
             return super.point(inside: point, with: event)
         }

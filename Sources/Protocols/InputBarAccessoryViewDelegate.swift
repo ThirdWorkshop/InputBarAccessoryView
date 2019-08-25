@@ -60,6 +60,8 @@ public protocol InputBarAccessoryViewDelegate: AnyObject {
     ///   - inputBar: The InputBarAccessoryView
     ///   - gesture: The gesture that was recognized
     func inputBar(_ inputBar: InputBarAccessoryView, didSwipeTextViewWith gesture: UISwipeGestureRecognizer)
+    
+    func touchPoint(inside point: CGPoint, with event: UIEvent?)
 }
 
 public extension InputBarAccessoryViewDelegate {
@@ -71,4 +73,6 @@ public extension InputBarAccessoryViewDelegate {
     func inputBar(_ inputBar: InputBarAccessoryView, textViewTextDidChangeTo text: String) {}
     
     func inputBar(_ inputBar: InputBarAccessoryView, didSwipeTextViewWith gesture: UISwipeGestureRecognizer) {}
+    
+    func touchPoint(inside point: CGPoint, with event: UIEvent?) {}
 }
